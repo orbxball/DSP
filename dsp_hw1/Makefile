@@ -34,4 +34,4 @@ cleann:
 	rm -f train model_01.txt model_02.txt model_03.txt model_04.txt model_05.txt test result1.txt result2.txt
 
 cleannn:
-	rm -f train model_01.txt model_02.txt model_03.txt model_04.txt model_05.txt test result1.txt result2.txt diff
+	rm -f train model_01.txt model_02.txt model_03.txt model_04.txt model_05.txt test result1.txt result2.txt diff acc.txt
