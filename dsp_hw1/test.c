@@ -11,8 +11,8 @@ int main(int argc, char const *argv[])
   }
 
   // Initialization
-  FILE* f;
-  f = fopen(argv[2], "r");
+  FILE* f = fopen(argv[2], "r");
+  FILE* result = fopen(argv[3], "w");
   char sequence[MAX_SEQ];
 
   HMM hmms[HMMNUM];
@@ -59,12 +59,11 @@ int main(int argc, char const *argv[])
     }
 
     // write into the result.txt
-    FILE* result = fopen(argv[3], "a");
     fprintf(result, "model_0%d.txt %e\n", index+1, prob[index]);
-    fclose(result);
   }
 
   fclose(f);
+  fclose(result);
 
   return 0;
 }
