@@ -1,5 +1,5 @@
 CC = gcc
-CFLAG = -std=c99
+CFLAG = -std=c99 -O2
 
 target = train test
 var = 1
@@ -15,7 +15,7 @@ test: test.c
 diff: diff.c
 	$(CC) $(CFLAG) $< -o $@
 
-run: runtrain runtest
+run: runtrain runtest1
 
 runtrain: train
 	./train $(var) model_init.txt seq_model_01.txt model_01.txt
@@ -24,8 +24,11 @@ runtrain: train
 	./train $(var) model_init.txt seq_model_04.txt model_04.txt
 	./train $(var) model_init.txt seq_model_05.txt model_05.txt
 
-runtest: test
+runtest1: test
 	./test modellist.txt testing_data1.txt result1.txt
+
+runtest2: test
+	./test modellist.txt testing_data2.txt result2.txt
 
 clean:
 	rm -f train model_01.txt model_02.txt model_03.txt model_04.txt model_05.txt
