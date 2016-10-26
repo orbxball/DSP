@@ -15,10 +15,12 @@ int main(int argc, char const *argv[]) {
   int iteration = atoi(argv[1]);
   while(iteration--){
     // Initialization for accumulate gamma & observ-gamma & epsilon
-    double accumulate_initial_gamma[MAX_STATE] = {0};
-    double accumulate_gamma[MAX_STATE] = {0};
-    double accumulate_observation_gamma[MAX_STATE][MAX_STATE] = {{0}};
-    double accumulate_epsilon[MAX_STATE][MAX_STATE] = {{0}};
+    double accumulate_initial[MAX_STATE] = {0};
+    double accumulate_tran_n[MAX_STATE][MAX_STATE] = {{0}};
+    double accumulate_tran_d[MAX_STATE] = {0};
+    double accumulate_observ_n[MAX_OBSERV][MAX_STATE] = {{0}};
+    double accumulate_observ_d[MAX_STATE] = {0};
+
 
     char sequence[MAX_SEQ];
     double sample_num = 0;
@@ -98,15 +100,19 @@ int main(int argc, char const *argv[]) {
 
       // Accumulate gamma, observ-gamma and epsilon
       for (int i = 0; i < hmm.state_num; i++) {
-        accumulate_initial_gamma[i] += gamma[0][i];
+        accumulate_initial[i] += gamma[0][i];
         for (int t = 0; t < observ_len-1; t++) {
-          accumulate_gamma[i] += gamma[t][i];
-          accumulate_observation_gamma[sequence[t]-'A'][i] += gamma[t][i];
+          accumulate_tran_d[i] += gamma[t][i];
+        }
+
+        for (int t = 0; t < observ_len; t++) {
+          accumulate_observ_d[i] += gamma[t][i];
+          accumulate_observ_n[sequence[t]-'A'][i] += gamma[t][i];
         }
 
         for (int j = 0; j < hmm.state_num; j++) {
           for (int t = 0; t < observ_len-1; t++)
-            accumulate_epsilon[i][j] += epsilon[t][i][j];
+            accumulate_tran_n[i][j] += epsilon[t][i][j];
         }
       }
     }
@@ -118,18 +124,18 @@ int main(int argc, char const *argv[]) {
 
     // pi
     for (int i = 0; i < hmm.state_num; i++)
-      hmm.initial[i] = accumulate_initial_gamma[i] / sample_num;
+      hmm.initial[i] = accumulate_initial[i] / sample_num;
 
     // A
     for (int i = 0; i < hmm.state_num; i++) {
       for (int j = 0; j < hmm.state_num; j++)
-        hmm.transition[i][j] = accumulate_epsilon[i][j] / accumulate_gamma[i];
+        hmm.transition[i][j] = accumulate_tran_n[i][j] / accumulate_tran_d[i];
     }
 
     // B
     for (int k = 0; k < hmm.observ_num; k++) {
       for (int j = 0; j < hmm.state_num; j++) {
-        hmm.observation[k][j] = accumulate_observation_gamma[k][j] / accumulate_gamma[j];
+        hmm.observation[k][j] = accumulate_observ_n[k][j] / accumulate_observ_d[j];
       }
     }
   }
