@@ -1,0 +1,120 @@
+>>> Default Settings
+>>> # state: 5; # gmm: 2
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 10:32:34 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=38.54 [H=185, S=295, N=480]
+WORD: %Corr=96.61, Acc=74.34 [H=1679, D=13, S=46, I=387, N=1738]
+===================================================================
+
+>>> Test 1
+>>> # state 10; # gmm: 2
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 10:24:20 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=80.83 [H=388, S=92, N=480]
+WORD: %Corr=96.61, Acc=93.67 [H=1679, D=26, S=33, I=51, N=1738]
+===================================================================
+
+>>> Test 2
+>>> # state 10; # gmm: 10
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 10:41:48 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=86.25 [H=414, S=66, N=480]
+WORD: %Corr=97.35, Acc=95.34 [H=1692, D=26, S=20, I=35, N=1738]
+===================================================================
+
+>>> Test 3
+>>> # state 10; # gmm: 12
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 10:54:03 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=87.71 [H=421, S=59, N=480]
+WORD: %Corr=97.41, Acc=95.97 [H=1693, D=27, S=18, I=25, N=1738]
+===================================================================
+
+>>> Test 4
+>>> # state 10; # gmm: 13
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 10:58:06 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=86.46 [H=415, S=65, N=480]
+WORD: %Corr=97.30, Acc=95.45 [H=1691, D=29, S=18, I=32, N=1738]
+===================================================================
+
+>>> Test 5
+>>> # state 15; # gmm: 13
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 11:08:27 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=92.08 [H=442, S=38, N=480]
+WORD: %Corr=97.81, Acc=97.58 [H=1700, D=29, S=9, I=4, N=1738]
+===================================================================
+
+>>> Test 6
+>>> # state 15; # gmm: 15
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 11:14:52 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=90.83 [H=436, S=44, N=480]
+WORD: %Corr=97.07, Acc=96.89 [H=1687, D=35, S=16, I=3, N=1738]
+===================================================================
+
+>>> Test 7
+>>> # state 15; # gmm: 13; # iter: 10
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 11:23:50 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=92.92 [H=446, S=34, N=480]
+WORD: %Corr=97.87, Acc=97.70 [H=1701, D=30, S=7, I=3, N=1738]
+===================================================================
+
+>>> Test 8
+>>> # state 15; # gmm: 13; # iter: 15
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 11:32:56 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=93.33 [H=448, S=32, N=480]
+WORD: %Corr=98.04, Acc=97.93 [H=1704, D=26, S=8, I=2, N=1738]
+===================================================================
+
+>>> Test 9
+>>> # state 15; # gmm: 3; # iter: 15
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 11:36:56 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=90.83 [H=436, S=44, N=480]
+WORD: %Corr=97.30, Acc=97.12 [H=1691, D=37, S=10, I=3, N=1738]
+===================================================================
+
+>>> Test 10
+>>> # state 15; # gmm: 13; # iter: 50
+====================== HTK Results Analysis =======================
+  Date: Thu Nov 24 11:55:58 2016
+  Ref : labels/answer.mlf
+  Rec : result/result.mlf
+------------------------ Overall Results --------------------------
+SENT: %Correct=93.96 [H=451, S=29, N=480]
+WORD: %Corr=98.16, Acc=98.10 [H=1706, D=26, S=6, I=1, N=1738]
+===================================================================

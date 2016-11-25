@@ -1,0 +1,50 @@
+VERSION=1.0
+N=15   L=33   
+I=0    W=sil                 
+I=1    W=jiu                 
+I=2    W=!NULL               
+I=3    W=ba                  
+I=4    W=qi                  
+I=5    W=liu                 
+I=6    W=wu                  
+I=7    W=si                  
+I=8    W=san                 
+I=9    W=er                  
+I=10   W=yi                  
+I=11   W=ling                
+I=12   W=sil                 
+I=13   W=!NULL               
+I=14   W=!NULL               
+J=0     S=2    E=0    
+J=1     S=2    E=1    
+J=2     S=12   E=1    
+J=3     S=1    E=2    
+J=4     S=3    E=2    
+J=5     S=4    E=2    
+J=6     S=5    E=2    
+J=7     S=6    E=2    
+J=8     S=7    E=2    
+J=9     S=8    E=2    
+J=10    S=9    E=2    
+J=11    S=10   E=2    
+J=12    S=11   E=2    
+J=13    S=2    E=3    
+J=14    S=12   E=3    
+J=15    S=2    E=4    
+J=16    S=12   E=4    
+J=17    S=2    E=5    
+J=18    S=12   E=5    
+J=19    S=2    E=6    
+J=20    S=12   E=6    
+J=21    S=2    E=7    
+J=22    S=12   E=7    
+J=23    S=2    E=8    
+J=24    S=12   E=8    
+J=25    S=2    E=9    
+J=26    S=12   E=9    
+J=27    S=2    E=10   
+J=28    S=12   E=10   
+J=29    S=2    E=11   
+J=30    S=12   E=11   
+J=31    S=14   E=12   
+J=32    S=0    E=13   
